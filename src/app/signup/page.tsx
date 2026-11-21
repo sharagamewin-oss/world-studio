@@ -40,7 +40,7 @@ export default function SignupPage() {
     try {
       setLoading(true);
 
-      await registerUser(email.trim(), password, name.trim());
+      await registerUser(name.trim(), email.trim(), password);
 
       router.push("/dashboard");
     } catch (err) {
